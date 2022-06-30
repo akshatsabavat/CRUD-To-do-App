@@ -4,6 +4,7 @@
   "description": "Crud App built with MERN stack",
   "main": "index.js",
   "scripts": {
+    "devStart": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/akshatsabavat/CRUD-To-do-App#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "express": "^4.18.1",
     "mongoose": "^6.4.1"
   },
