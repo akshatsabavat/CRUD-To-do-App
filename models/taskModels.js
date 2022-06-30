@@ -7,7 +7,7 @@ const taskSchema = new mongoose.Schema({
   },
   taskState: {
     type: Boolean,
-    default: true,
+    default: false, //false state signifies task is incomplete
   },
 });
 
