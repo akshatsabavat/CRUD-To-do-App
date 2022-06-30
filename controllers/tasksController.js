@@ -32,3 +32,15 @@ exports.addTask = async function (req, res) {
     res.status(500).json({ message: err.message });
   }
 };
+
+//function to DELETE TASK
+exports.deletetask = async function (req, res) {
+  const id = req.body.id;
+  try {
+    const taskTBD = await Task.findById(id);
+    taskTBD.remove();
+    res.send({ message: "task removed" });
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
+};
