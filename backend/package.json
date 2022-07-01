@@ -1,0 +1,29 @@
+{
+  "name": "crud-to-do-app",
+  "version": "1.0.0",
+  "description": "Crud App built with MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshatsabavat/CRUD-To-do-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshatsabavat/CRUD-To-do-App/issues"
+  },
+  "homepage": "https://github.com/akshatsabavat/CRUD-To-do-App#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.18"
+  }
+}
