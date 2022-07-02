@@ -2,7 +2,7 @@ import "./App.css";
 import Axios from "axios";
 
 const getAPI = () => {
-  Axios.get("http://localhost:3000/tasks").then((res) => console.log(res));
+  Axios.get("http://localhost:3000/tasks").then((res) => console.log(res.data));
 };
 
 function App() {
