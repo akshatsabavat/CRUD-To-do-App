@@ -5,7 +5,7 @@ const getAPI = () => {
   Axios.get("http://localhost:3000/tasks").then((res) => console.log(res.data));
 };
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>Task app</h1>
@@ -14,6 +14,6 @@ function App() {
       </button>
     </div>
   );
-}
+};
 
 export default App;
