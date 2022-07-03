@@ -1,10 +1,7 @@
-import useAPI from "../../Hooks/useAPI";
 import ListBox from "../../Components/ListBox/ListBox";
+import axios from "axios";
 
 const ListContainer = () => {
-  const { isloading, error, apiData } = useAPI("http://localhost:3000/tasks");
-  console.log(isloading);
-  console.log(apiData);
   return (
     <div className="Tasks container">
       {isloading ? (

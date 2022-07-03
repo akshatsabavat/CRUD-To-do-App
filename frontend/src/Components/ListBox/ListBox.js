@@ -3,7 +3,6 @@ import "../ListBox/ListBox.css";
 
 const ListBox = (props) => {
   const { setStatus } = useAPI("http://localhost:3000/tasks");
-  console.log(props.taskStatus);
   return (
     <div className="box-Container">
       <p className={props.taskStatus ? "listname-done" : "listname"}>
@@ -24,7 +23,7 @@ const ListBox = (props) => {
         >
           Mark UnDone
         </button>
-        <button>Remove Task</button>
+        <button onClick={() => props.removeFunction}>Remove Task</button>
       </div>
     </div>
   );
