@@ -27,11 +27,9 @@ const useAPI = (url) => {
   }, [taskState]);
 
   const setStatus = async (patchURL, taskID) => {
-    const response = await axios.patch(patchURL, {
+    await axios.patch(patchURL, {
       id: taskID,
     });
-    const data = await response.data;
-    console.log(data);
   };
 
   return { error, isloading, apiData, setStatus };
