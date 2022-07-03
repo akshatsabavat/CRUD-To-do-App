@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useAPI = (url) => {
   const [error, setError] = useState(null);
-  const [isloading, setIsLoading] = useState(false);
+  const [isloading, setIsLoading] = useState(true);
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const useAPI = (url) => {
     };
 
     fetchData();
-  }, [url]);
+  }, []);
 
   return { error, isloading, apiData };
 };

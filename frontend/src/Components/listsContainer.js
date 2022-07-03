@@ -1,7 +1,10 @@
 import useAPI from "../Hooks/useAPI";
+import { useState } from "react";
 
 const ListContainer = () => {
-  const { isloading, apiData } = useAPI("http://localhost:3000/tasks");
+  const { isloading, error, apiData } = useAPI("http://localhost:3000/tasks");
+  console.log(isloading);
+  console.log(apiData);
   return (
     <div className="Tasks container">
       {isloading ? (
@@ -9,7 +12,7 @@ const ListContainer = () => {
       ) : (
         <div>
           {apiData.map((task) => {
-            return <p>{task.taskName}</p>;
+            return <p key={task._id}>{task.taskName}</p>;
           })}
         </div>
       )}
