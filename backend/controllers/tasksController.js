@@ -70,14 +70,3 @@ exports.deletetask = async function (req, res) {
     res.status(404).json({ message: err.message });
   }
 };
-
-//test find function
-exports.findTask = async function (req, res) {
-  const taskName = req.body.taskName;
-  try {
-    const taskPointer = await Task.findOne({ taskName });
-    res.json(taskPointer);
-  } catch (err) {
-    res.status(404).json({ message: err.message });
-  }
-};
