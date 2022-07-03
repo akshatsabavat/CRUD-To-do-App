@@ -1,4 +1,4 @@
-import ListContainer from "../Components/listsContainer";
+import ListContainer from "../Containers/listContainer/listsContainer";
 import "./App.css";
 
 const App = () => {

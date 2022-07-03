@@ -1,0 +1,6 @@
+.box-Container {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
