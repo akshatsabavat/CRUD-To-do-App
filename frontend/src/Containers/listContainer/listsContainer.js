@@ -1,6 +1,5 @@
 import useAPI from "../../Hooks/useAPI";
 import ListBox from "../../Components/ListBox/ListBox";
-import { useState } from "react";
 
 const ListContainer = () => {
   const { isloading, error, apiData } = useAPI("http://localhost:3000/tasks");
@@ -15,6 +14,7 @@ const ListContainer = () => {
           {apiData.map((task) => {
             return (
               <ListBox
+                taskStatus={task.taskState}
                 taskID={task._id}
                 key={task._id}
                 listName={task.taskName}

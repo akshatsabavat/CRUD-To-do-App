@@ -5,6 +5,7 @@ const useAPI = (url) => {
   const [error, setError] = useState(null);
   const [isloading, setIsLoading] = useState(true);
   const [apiData, setApiData] = useState(null);
+  const [taskState, setTaskState] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -14,6 +15,7 @@ const useAPI = (url) => {
         const data = await response.data;
 
         setApiData(data);
+        setTaskState(data.taskState);
         setIsLoading(false);
       } catch (err) {
         setError(err);
@@ -22,7 +24,7 @@ const useAPI = (url) => {
     };
 
     fetchData();
-  }, []);
+  }, [taskState]);
 
   const setStatus = async (patchURL, taskID) => {
     const response = await axios.patch(patchURL, {

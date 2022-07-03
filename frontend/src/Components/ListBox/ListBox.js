@@ -1,12 +1,14 @@
-import { useState } from "react";
 import useAPI from "../../Hooks/useAPI";
 import "../ListBox/ListBox.css";
 
 const ListBox = (props) => {
   const { setStatus } = useAPI("http://localhost:3000/tasks");
+  console.log(props.taskStatus);
   return (
     <div className="box-Container">
-      <p className="listname">{props.listName}</p>
+      <p className={props.taskStatus ? "listname-done" : "listname"}>
+        {props.listName}
+      </p>
       <div className="cta-Container">
         <button
           onClick={() =>
