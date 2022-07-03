@@ -4,9 +4,7 @@ import "../ListBox/ListBox.css";
 const ListBox = (props) => {
   return (
     <div className="box-Container">
-      <p className="listname" key={props.listkey}>
-        {props.listName}
-      </p>
+      <p className="listname">{props.listName}</p>
       <div className="cta-Container">
         <button>Mark Done</button>
         <button>Mark UnDone</button>

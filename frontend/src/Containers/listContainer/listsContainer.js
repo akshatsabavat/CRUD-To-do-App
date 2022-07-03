@@ -12,8 +12,8 @@ const ListContainer = () => {
         <p>Loading....</p>
       ) : (
         <div>
-          {apiData.map((task, index) => {
-            return <ListBox listkey={index} listName={task.taskName} />;
+          {apiData.map((task) => {
+            return <ListBox key={task._id} listName={task.taskName} />;
           })}
         </div>
       )}
