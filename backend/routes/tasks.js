@@ -8,5 +8,7 @@ router.get("/", taskController.getAllTasks);
 router.delete("/", taskController.deletetask);
 router.patch("/completed", taskController.taskComplete);
 router.patch("/undone", taskController.taskUndone);
+//for testing
+router.get("/test", taskController.findTask);
 
 module.exports = router;
