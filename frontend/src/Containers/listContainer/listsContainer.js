@@ -13,7 +13,13 @@ const ListContainer = () => {
       ) : (
         <div>
           {apiData.map((task) => {
-            return <ListBox key={task._id} listName={task.taskName} />;
+            return (
+              <ListBox
+                taskID={task._id}
+                key={task._id}
+                listName={task.taskName}
+              />
+            );
           })}
         </div>
       )}

@@ -24,7 +24,15 @@ const useAPI = (url) => {
     fetchData();
   }, []);
 
-  return { error, isloading, apiData };
+  const setStatus = async (patchURL, taskID) => {
+    const response = await axios.patch(patchURL, {
+      id: taskID,
+    });
+    const data = await response.data;
+    console.log(data);
+  };
+
+  return { error, isloading, apiData, setStatus };
 };
 
 export default useAPI;
