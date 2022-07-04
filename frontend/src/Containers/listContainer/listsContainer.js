@@ -40,14 +40,11 @@ const ListContainer = () => {
     getData();
   };
 
-  // const deleteTask = async (taskID) => {
-  //   const response = await axios.delete("http://localhost:3000/tasks", {
-  //     id: taskID,
-  //   });
-  //   const data = await response.data;
-
-  //   console.log(data);
-  // };
+  const deleteTask = async (taskID) => {
+    await axios.delete("http://localhost:3000/tasks/" + taskID);
+    console.log("hi");
+    getData();
+  };
 
   const addTask = async (taskName) => {
     setIsLoading(true);
@@ -82,6 +79,7 @@ const ListContainer = () => {
           {apiData.map((task) => {
             return (
               <ListBox
+                removeFunction={() => deleteTask(task._id)}
                 completeFunction={() => completeTask(task._id)}
                 undoFunction={() => UndoTask(task._id)}
                 taskStatus={task.taskState}

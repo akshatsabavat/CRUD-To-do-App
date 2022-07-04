@@ -61,11 +61,10 @@ exports.taskUndone = async function (req, res) {
 
 //function to DELETE task
 exports.deletetask = async function (req, res) {
-  const id = req.body.id;
+  const id = req.params.id;
   try {
-    const taskTBD = await Task.findById(id);
-    taskTBD.remove();
-    res.send({ message: "task removed" });
+    const response = await Task.findByIdAndDelete(id);
+    res.json(response);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }

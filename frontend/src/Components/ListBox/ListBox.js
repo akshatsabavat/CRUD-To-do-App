@@ -9,7 +9,7 @@ const ListBox = (props) => {
       <div className="cta-Container">
         <button onClick={props.completeFunction}>Mark Done</button>
         <button onClick={props.undoFunction}>Mark UnDone</button>
-        <button>Remove Task</button>
+        <button onClick={props.removeFunction}>Remove Task</button>
       </div>
     </div>
   );
