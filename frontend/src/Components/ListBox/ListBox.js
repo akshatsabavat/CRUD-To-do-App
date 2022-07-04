@@ -2,7 +2,11 @@ import "../ListBox/ListBox.css";
 
 const ListBox = (props) => {
   return (
-    <div className="box-Container">
+    <div
+      className={
+        props.taskStatus ? "box-Contianer taskCompelete" : "box-Container"
+      }
+    >
       <p className={props.taskStatus ? "listname-done" : "listname"}>
         {props.listName}
       </p>
